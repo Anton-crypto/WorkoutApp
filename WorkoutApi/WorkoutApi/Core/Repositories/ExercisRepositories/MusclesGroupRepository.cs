@@ -7,7 +7,7 @@ namespace WorkoutApi.Core.Repositories
 {
     public class MusclesGroupRepository : GenericRepository<MusclesGroup>, IMusclesGroupRepository
     {
-        public MusclesGroupRepository (
+        public MusclesGroupRepository(
             AppDbContext context,
             ILogger logger
         ) : base(context, logger)
@@ -16,3 +16,4 @@ namespace WorkoutApi.Core.Repositories
         }
     }
 }
+

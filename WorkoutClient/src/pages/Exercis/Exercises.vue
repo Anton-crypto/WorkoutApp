@@ -1,8 +1,13 @@
 <template>
     <div>
+        <AddFormExercis></AddFormExercis>
+    </div>
+    <div>
         <TransitionGroup name="ex-transition" tag="ul">
-            <div v-for="(exercis) in exercises" :key="exercis.id" class="cards__item"  >
-                <Card @deleteCard="deleteProduct" :card="exercis" />
+            <div class="cards">
+                <div v-for="(exercis) in exercises" :key="exercis.id" class="cards__item"  >
+                    <Card @deleteCard="deleteProduct" :card="exercis" />
+                </div>
             </div>
         </TransitionGroup>
         <div v-intersection="loadMoreExercises" class="loading"></div>
@@ -11,6 +16,7 @@
 
 <script>
     import Card from '@/components/Card';
+    import AddFormExercis from '@/components/AddFormExercis'
 
     export default {
         name: 'list-exercis',
@@ -42,6 +48,7 @@
         },
         components: {
             Card,
+            AddFormExercis,
         }
     }
 </script>
@@ -59,6 +66,7 @@
 
 
         &__item {
+            max-width: 330px;
             margin-right: 16px;
             margin-bottom: 16px;
         }

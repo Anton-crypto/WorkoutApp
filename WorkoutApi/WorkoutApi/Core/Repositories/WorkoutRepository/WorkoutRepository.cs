@@ -1,7 +1,7 @@
 ﻿using WorkoutApi.Core.IRepositories;
-using WorkoutApi.Models;
 using WorkoutApi.Data;
 using Microsoft.EntityFrameworkCore;
+using WorkoutApi.Models.WorkoutModels;
 
 namespace WorkoutApi.Core.Repositories
 {

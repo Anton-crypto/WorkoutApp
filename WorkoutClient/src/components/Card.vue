@@ -1,14 +1,14 @@
 <template>
   <div class="card">
     <!-- <img class="card__img" :src="card.imgUrl" alt="" srcset="" /> -->
-    <div class="card__video">
-        <video width="480" height="320" controls="controls" autoplay="autoplay">
-            <source src="https://localhost:7024/Resources/Vidios/016e097d-43a4-410a-9ad4-74420ecc697e.mp4" type="video/webm">
-        </video>
-    </div>
     <div class="card__body">
         <div class="card__title">
             {{card.name}}
+        </div>
+        <div class="card__video">
+            <video controls="controls">
+                <source src="https://localhost:7024/Resources/Vidios/016e097d-43a4-410a-9ad4-74420ecc697e.mp4" type="video/webm">
+            </video>
         </div>
     </div>
     <!-- <div class="card__btn-delete" @click="deleteCard(card.id)" >
@@ -43,7 +43,7 @@
 
 <style lang="scss" scoped>
     .card {
-        width: 332px;
+        max-width: 330px;
         height: 100%;
         background: #FFFEFB;
         box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
@@ -64,6 +64,11 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+        }
+        &__video {
+            video {
+                width: 100%;
+            }
         }
         &__title {      
             font-weight: 600;

@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WorkoutApi.Core.Repositories
 {
-    public class MusclesGroupOfWorkoutRepository : GenericRepository<MusclesGroupOfWorkout>, IMusclesGroupOfWorkoutRepository
+    public class ExercisOfVidioRepository : GenericRepository<ExercisOfVidio>, IExercisOfVidioRepository
     {
-        public MusclesGroupOfWorkoutRepository(
+        public ExercisOfVidioRepository(
             AppDbContext context,
             ILogger logger
         ) : base(context, logger)

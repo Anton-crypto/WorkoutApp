@@ -1,4 +1,4 @@
-﻿using WorkoutApi.Models;
+﻿using WorkoutApi.Models.WorkoutModels;
 
 namespace WorkoutApi.Core.IRepositories
 {

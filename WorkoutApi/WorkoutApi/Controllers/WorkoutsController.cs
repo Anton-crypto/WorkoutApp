@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WorkoutApi.Core.IConfiguration;
 using WorkoutApi.Models;
+using WorkoutApi.Models.WorkoutModels;
 
 namespace WorkoutApi.Controllers
 {
