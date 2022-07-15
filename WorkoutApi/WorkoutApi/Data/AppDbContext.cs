@@ -12,7 +12,7 @@ namespace WorkoutApi.Data
 
         public virtual DbSet<Exercis> Exercises { get; set; }
         public virtual DbSet<ExercisOfImg> ExercisOfImges { get; set; }
-        public virtual DbSet<ExercisOfVidio> ExercisOfVidios { get; set; }
+        public virtual DbSet<ExercisOfFile> ExercisOfVidios { get; set; }
         public virtual DbSet<ExercisOfMusclesGroup> ExercisOfMusclesGroups { get; set; }
         public virtual DbSet<ExercisOfDifficultyLevel> ExercisOfDifficultyLevels { get; set; }
 

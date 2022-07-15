@@ -36,7 +36,7 @@ namespace WorkoutApi.Data
             WorkoutOfExercises = new WorkoutOfExercisRepository(_context, _logger);
 
             Exercises = new ExercisRepository(_context, _logger);
-            ExercisOfImges = new ExercisOfImgRepository(_context, _logger);
+            ExercisOfImges = new ExercisOfFileRepository(_context, _logger);
             ExercisOfVidios = new ExercisOfVidioRepository(_context, _logger);
             ExercisOfMusclesGroups = new ExercisOfMusclesGroupRepository(_context, _logger);
             ExercisOfDifficultyLevels = new ExercisOfDifficultyLevelRepository(_context, _logger);
@@ -44,7 +44,7 @@ namespace WorkoutApi.Data
             MusclesGroups = new MusclesGroupRepository(_context, _logger);
             DifficultyLevels = new DifficultyLevelRepository(_context, _logger);
 
-            Imges = new ImgRepository(_context, _logger);
+            Imges = new FileRepository(_context, _logger);
             Vidios = new VidioRepository(_context, _logger);
         }
         public async Task CompleteAsync()

@@ -10,8 +10,7 @@
         public string? NumberOfRepetitions { get; set; } // Количество повторений
         public string? DifficultyLevel { get; set; } // Уровень сложности
 
-        public List<ExercisOfImg>? Img { get; set; }
-        public List<ExercisOfVidio>? Vidio { get; set; }
+        public List<ExercisOfFile>? File { get; set; }
         public List<ExercisOfMusclesGroup>? MusclesGroupOfWorkouts { get; set; }
         public List<DifficultyLevel>? DifficultyLevels { get; set; }
     }
