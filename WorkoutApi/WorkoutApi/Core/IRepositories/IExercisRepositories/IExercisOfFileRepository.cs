@@ -2,7 +2,7 @@
 
 namespace WorkoutApi.Core.IRepositories
 {
-    public interface IExercisOfImgRepository : IGenericRepository<ExercisOfImg>
+    public interface IExercisOfFileRepository : IGenericRepository<ExercisOfFile>
     {
     }
 }

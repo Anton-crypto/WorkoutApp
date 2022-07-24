@@ -12,6 +12,6 @@
         public Guid? DifficultyLevelId { get; set; } // Уровень сложности
         public Guid? MusclesGroupId { get; set; }
 
-        public List<File>? Files { get; set; }
+        public List<IFormFile>? Files { get; set; }
     }
 }

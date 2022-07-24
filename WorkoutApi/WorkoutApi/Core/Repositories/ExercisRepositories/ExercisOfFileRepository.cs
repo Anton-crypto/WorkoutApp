@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WorkoutApi.Core.Repositories
 {
-    public class ExercisOfFileRepository : GenericRepository<ExercisOfImg>, IExercisOfImgRepository
+    public class ExercisOfFileRepository : GenericRepository<ExercisOfFile>, IExercisOfFileRepository
     {
         public ExercisOfFileRepository(
             AppDbContext context,

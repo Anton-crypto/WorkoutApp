@@ -10,16 +10,16 @@ namespace WorkoutApi.Data
         public IWorkoutOfExercisRepository WorkoutOfExercises { get; }
 
         public IExercisRepository Exercises { get; }
-        public IExercisOfImgRepository ExercisOfImges { get; }
-        public IExercisOfVidioRepository ExercisOfVidios { get; }
+        public IExercisOfFileRepository ExercisOfFiles { get; }
+
         public IExercisOfMusclesGroupRepository ExercisOfMusclesGroups { get; }
         public IExercisOfDifficultyLevelRepository ExercisOfDifficultyLevels { get; }
 
         public IMusclesGroupRepository MusclesGroups { get; }
         public IDifficultyLevelRepository DifficultyLevels { get; }
 
-        public IImgRepository Imges { get; }
-        public IVidioRepository Vidios { get; }
+        public IFileRepository Files { get; }
+
 
         private readonly AppDbContext _context;
         private readonly ILogger _logger;
@@ -36,25 +36,18 @@ namespace WorkoutApi.Data
             WorkoutOfExercises = new WorkoutOfExercisRepository(_context, _logger);
 
             Exercises = new ExercisRepository(_context, _logger);
-            ExercisOfImges = new ExercisOfFileRepository(_context, _logger);
-            ExercisOfVidios = new ExercisOfVidioRepository(_context, _logger);
+            ExercisOfFiles = new ExercisOfFileRepository(_context, _logger);
+
             ExercisOfMusclesGroups = new ExercisOfMusclesGroupRepository(_context, _logger);
             ExercisOfDifficultyLevels = new ExercisOfDifficultyLevelRepository(_context, _logger);
 
             MusclesGroups = new MusclesGroupRepository(_context, _logger);
             DifficultyLevels = new DifficultyLevelRepository(_context, _logger);
 
-            Imges = new FileRepository(_context, _logger);
-            Vidios = new VidioRepository(_context, _logger);
-        }
-        public async Task CompleteAsync()
-        {
-            await _context.SaveChangesAsync();
+            Files = new FileRepository(_context, _logger);
         }
 
-        public async void Dispose()
-        {
-            await _context.DisposeAsync();
-        }
+        public async Task CompleteAsync() { await _context.SaveChangesAsync(); }
+        public async void Dispose() { await _context.DisposeAsync(); }
     }
 }

@@ -26,6 +26,12 @@ if(directives != undefined) {
     });
 }
 
+const token = localStorage.getItem('user-token')
+
+if (token) {
+  axios.defaults.headers.common['Authorization'] = token
+}
+
 app.use(store)
 app.use(router)
 app.use(VueAxios, axios)

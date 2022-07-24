@@ -5,9 +5,9 @@ using WorkoutApi.Models;
 
 namespace WorkoutApi.Core.Repositories
 {
-    public class ImgRepository : GenericRepository<Img>, IImgRepository
+    public class FileRepository : GenericRepository<Models.File>, IFileRepository
     {
-        public ImgRepository(
+        public FileRepository(
             AppDbContext context,
             ILogger logger
         ) : base(context, logger)

@@ -19,8 +19,7 @@
 
   <ItemGroup>
     <Folder Include="GraphQL\" />
-    <Folder Include="Resources\Images\" />
-    <Folder Include="Resources\Vidios\" />
+    <Folder Include="Resources\File\" />
   </ItemGroup>
 
 </Project>

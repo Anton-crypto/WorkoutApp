@@ -8,16 +8,15 @@ namespace WorkoutApi.Core.IConfiguration
         IWorkoutOfExercisRepository WorkoutOfExercises { get; }
 
         IExercisRepository Exercises { get; }
-        IExercisOfImgRepository ExercisOfImges { get; }
-        IExercisOfVidioRepository ExercisOfVidios { get; }
+        IExercisOfFileRepository ExercisOfFiles { get; } 
+
         IExercisOfMusclesGroupRepository ExercisOfMusclesGroups { get; }
         IExercisOfDifficultyLevelRepository ExercisOfDifficultyLevels { get; }
 
         IMusclesGroupRepository MusclesGroups { get; }
         IDifficultyLevelRepository DifficultyLevels { get; }
 
-        IImgRepository Imges { get; }
-        IVidioRepository Vidios { get; }
+        IFileRepository Files { get; }
 
         Task CompleteAsync();
     }

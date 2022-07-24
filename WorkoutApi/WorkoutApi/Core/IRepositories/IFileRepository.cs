@@ -2,7 +2,7 @@
 
 namespace WorkoutApi.Core.IRepositories
 {
-    public interface IImgRepository : IGenericRepository<Img>
+    public interface IFileRepository : IGenericRepository<Models.File>
     {
     }
 }

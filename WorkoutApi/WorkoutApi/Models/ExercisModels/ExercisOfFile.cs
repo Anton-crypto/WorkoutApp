@@ -8,6 +8,6 @@
         public Guid VidioId { get; set; }
 
         public Exercis? Exercis { get; set; }
-        public Vidio? Vidio { get; set; }
+        public File? File { get; set; }
     }
 }
